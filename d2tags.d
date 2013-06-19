@@ -108,6 +108,8 @@ void convertJSONObject(in string tagFile, ref string[] tagLines,
 	newLine ~= "s\t" ~ affiliation(parentJsonObject);
     case "typedef":
 	newLine ~= "t\t" ~ affiliation(parentJsonObject);
+    case "import":
+	break;
     case "variable":
 	switch (parentJsonObject["kind"].str) {
 	case "class", "struct":
